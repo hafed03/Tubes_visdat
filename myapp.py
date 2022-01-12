@@ -106,16 +106,10 @@ tabs = Tabs(tabs=[tot_case_ind_panel, new_case_ind_panel])
 
 
 # CDS Pulau Jawa dan Nusa Teanggara
-jawa = df2(df2['Island'] == 'Jawa') 
+jawa = df2[(df2['Island'] == 'Jawa') | (df2['Island'] == 'Nusa Tenggara')]
 jawa = jawa.groupby(['Date']).sum().reset_index()
-jawa['Island'] = 'Jawa'
+jawa['Island'] = 'Jawa dan Nusa Tenggara'
 jawa_cds = ColumnDataSource(jawa)
-
-# CDS Pulau Nusa Tenggara
-nt = df2['Island'] == 'Nusa Tenggara')
-nt = nt.groupby(['Date']).sum().reset_index()
-nt['Island'] = 'Nusa Tenggara'
-nt_cds = ColumnDataSource(Nusa Tenggara)
 
 # CDS Sumatera
 sumatera = df2[df2['Island'] == 'Sumatera']
@@ -161,11 +155,8 @@ tot_case.line('Date', 'TotalCases',
               color='green', legend_label='Total Kasus Pulau Sumatera',
               source=sumatera_cds)
 tot_case.line('Date', 'TotalCases',
-              color='blue', legend_label='Total Kasus Pulau Jawa',
+              color='blue', legend_label='Total Kasus Pulau Jawa dan Nusa Tenggara',
               source=jawa_cds)
-tot_case.line('Date', 'TotalCases',
-              color='red', legend_label='Total Kasus Pulau Nusa Tenggara',
-              source=nt_cds)              
 tot_case.line('Date', 'TotalCases',
               color='black', legend_label='Total Kasus Pulau Kalimantan',
               source=kalimantan_cds)
@@ -180,11 +171,8 @@ new_case.line('Date', 'NewCases',
               color='green', legend_label='Kasus Baru Pulau Sumatera',
               source=sumatera_cds)
 new_case.line('Date', 'NewCases',
-              color='blue', legend_label='Kasus Baru Pulau Jawa',
+              color='blue', legend_label='Kasus Baru Pulau Jawa dan Nusa Tenggara',
               source=jawa_cds)
-new_case.line('Date', 'NewCases',
-              color='red', legend_label='Kasus Baru Pulau Nusa Tenggara',
-              source=nt_cds)              
 new_case.line('Date', 'NewCases',
               color='black', legend_label='Kasus Baru Pulau Kalimantan',
               source=kalimantan_cds)
@@ -229,7 +217,7 @@ new_case_panel = Panel(child=new_case, title='Kasus Baru')
 tabs2 = Tabs(tabs=[tot_case_panel, new_case_panel])
 
 # Tambahkan judul untuk Figure 1 yaitu Jumlah Kasus Covid-19 di Seluruh Indonesia
-html = """<h3>Persebaran Jumlah Kasus Covid-19 Di Indonesia</h3>
+html = """<h3>Persebaran Jumlah Kasus Covid-19 Di Indonesiaku</h3>
 <b><i>2020-2021</i>
 <br>
 """
