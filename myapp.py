@@ -212,7 +212,7 @@ tot_case.plot_width = new_case.plot_width = 1000
 # Definisikan dua panel berisi total kasus dan kasus baru
 tot_case_panel = Panel(child=tot_case, title='Total Kasus')
 new_case_panel = Panel(child=new_case, title='Kasus Baru')
-kal_panel      = Panel(child=new_case, title='Kalimantan')
+kal_panel      = Panel(title='Kalimantan')
 
 # Masukkan panel pada tabs button
 tabs2 = Tabs(tabs=[tot_case_panel, new_case_panel, kal_panel])
