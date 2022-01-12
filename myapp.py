@@ -5,7 +5,7 @@ from bokeh.plotting import figure, show, curdoc
 from bokeh.io import output_file, output_notebook
 from bokeh.models import ColumnDataSource, HoverTool, Div
 from bokeh.models.widgets import Tabs, Panel
-from bokeh.layouts import row
+from bokeh.layouts import column
 from bokeh.models import NumeralTickFormatter
 
 df = pd.read_csv('data/covid_19_indonesia_time_series_all.csv')
@@ -93,7 +93,7 @@ new_case_ind.add_tools(HoverTool(tooltips=tooltips2, formatters={
                        '@Date': 'datetime'}, renderers=[hover_glyph, hover_glyph2]))
 
 # Konfigurasi ukuran plot / diagram
-tot_case_ind.plot_width = new_case_ind.plot_width = 500
+tot_case_ind.plot_width = new_case_ind.plot_width = 1000
 
 # Definisikan dua panel berisi total kasus dan kasus baru
 tot_case_ind_panel = Panel(child=tot_case_ind, title='Total Kasus')
@@ -215,7 +215,7 @@ new_case.add_tools(HoverTool(tooltips=tooltips4,
                              formatters={'@Date': 'datetime'}))
 
 # Konfigurasi ukuran plot / diagram
-tot_case.plot_width = new_case.plot_width = 500
+tot_case.plot_width = new_case.plot_width = 1000
 
 # Definisikan dua panel berisi total kasus dan kasus baru
 tot_case_panel = Panel(child=tot_case, title='Total Kasus')
@@ -245,4 +245,4 @@ sup_title2 = Div(text=html2)
 spacing = Div(text=space)
 
 # Lakukan running untuk hasil akhir
-curdoc().add_root(row(sup_title1, tabs, spacing, sup_title2, tabs2))
+curdoc().add_root(column(sup_title1, tabs, spacing, sup_title2, tabs2))
