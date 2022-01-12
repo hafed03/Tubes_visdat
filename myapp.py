@@ -113,7 +113,7 @@ jawa_cds = ColumnDataSource(jawa)
 
 # CDS Pulau Nusa Tenggara
 nt = df2['Island'] == 'Nusa Tenggara')
-nt = jawa.groupby(['Date']).sum().reset_index()
+nt = nt.groupby(['Date']).sum().reset_index()
 nt['Island'] = 'Nusa Tenggara'
 nt_cds = ColumnDataSource(Nusa Tenggara)
 
