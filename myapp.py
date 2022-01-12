@@ -37,12 +37,12 @@ indonesia_cds = ColumnDataSource(indonesia)
 
 # Definisikan figure untuk dijadikan sebagai plot diagram
 tot_case_ind = figure(x_axis_type='datetime',
-                      plot_height=500, plot_width=800,
+                      plot_height=500, plot_width=900,
                       title='Total Kasus Covid',
                       x_axis_label='Tanggal', y_axis_label='Total Kasus')
 
 new_case_ind = figure(x_axis_type='datetime',
-                      plot_height=500, plot_width=800,
+                      plot_height=500, plot_width=900,
                       title='Kasus Baru',
                       x_axis_label='Tanggal', y_axis_label='Kasus Baru')
 
