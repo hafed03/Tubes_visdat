@@ -42,7 +42,7 @@ tot_case_ind = figure(x_axis_type='datetime',
                       x_axis_label='Tanggal', y_axis_label='Total Kasus')
 
 new_case_ind = figure(x_axis_type='datetime',
-                      plot_height=500, plot_width=900,
+                      plot_height=500, plot_width=800,
                       title='Kasus Baru',
                       x_axis_label='Tanggal', y_axis_label='Kasus Baru')
 
