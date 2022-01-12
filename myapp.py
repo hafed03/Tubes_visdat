@@ -217,7 +217,7 @@ new_case_panel = Panel(child=new_case, title='Kasus Baru')
 tabs2 = Tabs(tabs=[tot_case_panel, new_case_panel])
 
 # Tambahkan judul untuk Figure 1 yaitu Jumlah Kasus Covid-19 di Seluruh Indonesia
-html = """<h3>Persebaran Jumlah Kasus Covid-19 Di Indonesiaku</h3>
+html = """<h3>Persebaran Jumlah Kasus Covid-19 Di Indonesia</h3>
 <b><i>2020-2021</i>
 <br>
 """
