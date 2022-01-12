@@ -46,6 +46,10 @@ new_case_ind = figure(x_axis_type='datetime',
                       title='Kasus Baru',
                       x_axis_label='Tanggal', y_axis_label='Kasus Baru')
 
+new_case_ind.background_fill_color = (204, 255, 255)
+new_case_ind.border_fill_color = (102, 204, 255)
+new_case_ind.outline_line_color = (0, 0, 255)
+
 # Definisikan y-axis
 tot_case_ind.yaxis.formatter = NumeralTickFormatter(format="00")
 new_case_ind.yaxis.formatter = NumeralTickFormatter(format="00")
