@@ -212,9 +212,10 @@ tot_case.plot_width = new_case.plot_width = 1000
 # Definisikan dua panel berisi total kasus dan kasus baru
 tot_case_panel = Panel(child=tot_case, title='Total Kasus')
 new_case_panel = Panel(child=new_case, title='Kasus Baru')
+kal_panel      = Panel(child=new_case, title='Kalimantan')
 
 # Masukkan panel pada tabs button
-tabs2 = Tabs(tabs=[tot_case_panel, new_case_panel])
+tabs2 = Tabs(tabs=[tot_case_panel, new_case_panel, kal_panel])
 
 # Tambahkan judul untuk Figure 1 yaitu Jumlah Kasus Covid-19 di Seluruh Indonesia
 html = """<h3>Persebaran Jumlah Kasus Covid-19 Di Indonesia</h3>
