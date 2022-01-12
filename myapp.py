@@ -138,13 +138,17 @@ papua_cds = ColumnDataSource(papua)
 # Definisikan figure untuk dijadikan sebagai diagram 
 tot_case = figure(x_axis_type='datetime',
                   plot_height=500, plot_width=800,
-                  title='Total Kasus Covid',
+                  title='Total Kasus Covid', 
                   x_axis_label='Tanggal', y_axis_label='Total Kasus')
 
 new_case = figure(x_axis_type='datetime',
                   plot_height=500, plot_width=800,
-                  title='Kasus Baru',
+                  title='Kasus Baru', 
                   x_axis_label='Tanggal', y_axis_label='Kasus Baru')
+
+new_case.background_fill_color = (204, 255, 255)
+new_case.border_fill_color = (102, 204, 255)
+new_case.outline_line_color = (0, 0, 255)
 
 # Definisikan y-axis
 tot_case.yaxis.formatter = NumeralTickFormatter(format="00")
