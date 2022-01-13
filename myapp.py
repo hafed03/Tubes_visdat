@@ -162,7 +162,7 @@ new_case.yaxis.formatter = NumeralTickFormatter(format="00")
 # Definisikan line / proses render line
 total_case.line('Date', 'TotalCases',
               color='green', legend_label='Total Kasus Pulau Sumatera',
-              source=sumatera_cds,line_bold=1)
+              source=sumatera_cds,line_bold=2.0)
 total_case.line('Date', 'TotalCases',
               color='blue', legend_label='Total Kasus Pulau Jawa',
               source=jawa_cds)
