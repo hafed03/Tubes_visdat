@@ -92,7 +92,7 @@ new_case_ind.add_tools(HoverTool(tooltips=tooltips2, formatters={
                        '@Date': 'datetime'}, renderers=[hover, hover2]))
 
 # Konfigurasi ukuran plot / diagram
-total_case_ind.plot_width = new_case_ind.plot_width = 1000
+total_case_ind.plot_width = new_case_ind.plot_width = 1200
 
 # Definisikan dua panel berisi total kasus dan Kasus Terkini
 total_case_ind_panel = Panel(child=total_case_ind, title='Total Kasus')
