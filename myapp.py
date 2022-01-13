@@ -228,7 +228,7 @@ new_case.add_tools(HoverTool(tooltips=tooltips4,
                              formatters={'@Date': 'datetime'}))
 
 # Konfigurasi ukuran plot / diagram
-total_case.plot_width = new_case.plot_width = 1000
+total_case.plot_width = new_case.plot_width = 1360
 
 # Definisikan dua panel berisi total kasus dan Kasus Terkini
 total_case_panel = Panel(child=total_case, title='Total Kasus')
